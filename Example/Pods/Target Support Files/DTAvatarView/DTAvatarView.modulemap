@@ -1,0 +1,6 @@
+framework module DTAvatarView {
+  umbrella header "DTAvatarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

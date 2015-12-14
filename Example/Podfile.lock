@@ -1,0 +1,14 @@
+PODS:
+  - DTAvatarView (0.1.0)
+
+DEPENDENCIES:
+  - DTAvatarView (from `../`)
+
+EXTERNAL SOURCES:
+  DTAvatarView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DTAvatarView: 1519c1504d7b388a81a011239a8b9a6ea91991d2
+
+COCOAPODS: 0.39.0
