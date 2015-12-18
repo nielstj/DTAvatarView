@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var sizeConstraint : NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +22,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func changeSize(sender : AnyObject) {
+        var size = sizeConstraint.constant
+        size = size == 0 ? -60 : 0
+        sizeConstraint.constant = size
+        view.subviews.forEach { (view) -> () in
+            view.setNeedsDisplay()
+        }
+    }
+    
 
 }
 

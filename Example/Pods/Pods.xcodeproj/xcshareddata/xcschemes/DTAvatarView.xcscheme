@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3896523A241244406BA7C198'
+               BlueprintIdentifier = '6D3805B17F012B2BF13152BF'
                BlueprintName = 'DTAvatarView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DTAvatarView.framework'>

@@ -1,15 +1,15 @@
 {
   "name": "DTAvatarView",
   "version": "0.1.0",
-  "summary": "A short description of DTAvatarView.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DTAvatarView",
+  "summary": "Avatar that shows image or initial name",
+  "description": "DTAvatarView accept image or show initials if name is not available",
+  "homepage": "https://github.com/nielstj/DTAvatarView",
   "license": "MIT",
   "authors": {
     "Daniel Tjuatja": "daniel.tjuatja@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DTAvatarView.git",
+    "git": "https://github.com/nielstj/DTAvatarView.git",
     "tag": "0.1.0"
   },
   "platforms": {

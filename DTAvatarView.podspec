@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = "DTAvatarView accept image or show initials if name is not available"
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DTAvatarView"
+  s.homepage         = "https://github.com/nielstj/DTAvatarView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Daniel Tjuatja" => "daniel.tjuatja@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DTAvatarView.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/nielstj/DTAvatarView.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
