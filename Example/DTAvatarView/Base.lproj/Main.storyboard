@@ -38,7 +38,6 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="profileBGColor">
                                         <color key="value" red="0.83879009049999997" green="0.016421669409999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="avaName" value="Crazy Girl"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isNameHidden" value="NO"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="avaNameString" value="aafaff"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="avaNameColor">

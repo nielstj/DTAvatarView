@@ -153,7 +153,10 @@ class DTAvatarView: UIView {
     }
     
     private func getInitialFromName(name : String) -> String {
-        let nameArr = name.componentsSeparatedByString(" ")
+        var nameArr = name.componentsSeparatedByString(" ")
+        nameArr = nameArr.filter({ (word) -> Bool in
+            return word.characters.count > 0
+        })
         var initial = String(nameArr.first!.characters.first!)
         if nameArr.count > 1 { initial += String(nameArr.last!.characters.first!) }
         return initial
