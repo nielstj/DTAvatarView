@@ -64,7 +64,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cGt-L2-2IM" userLabel="bottomLeftIcon">
                             <rect key="frame" x="0.0" y="155.5" width="71.5" height="77.5"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="tO7-32-Rfa" userLabel="NameLbl">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="tO7-32-Rfa" userLabel="NameLbl">
                             <rect key="frame" x="0.0" y="233" width="215" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="kUI-pP-yBb"/>

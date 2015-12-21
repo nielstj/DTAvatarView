@@ -36,11 +36,10 @@ class DTAvatarView: UIView {
     @IBInspectable var isNameHidden : Bool = false {
         didSet { self.updateAvaNameLbl() }
     }
-    @IBInspectable var avaName : String? {
+    @IBInspectable var avaName : String = "Anonymous"  {
         didSet {
-            let name = avaName != nil ? avaName : "Anonymous"
-            nameLbl.text = name
-            initialLbl.text = getInitialFromName(name!)
+            nameLbl.text = avaName
+            initialLbl.text = getInitialFromName(avaName)
         }
     }
     @IBInspectable var avaNameSize : CGFloat = 20 {
@@ -98,6 +97,7 @@ class DTAvatarView: UIView {
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         addSubview(view)
+        avaName = "Anonymous"
     }
     
     func loadViewFromNib() -> UIView {
