@@ -27,20 +27,31 @@
                                     <action selector="changeSize:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eJc-S3-trG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-ZO-DQN" customClass="DTAvatarView" customModule="DTAvatarView">
-                                <rect key="frame" x="200" y="164.5" width="180" height="244"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-ZO-DQN" customClass="DTAvatarView" customModule="DTAvatarView">
+                                <rect key="frame" x="200" y="168" width="200" height="232"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Wd0-ZO-DQN" secondAttribute="height" multiplier="6:7" id="I4e-8v-xZL"/>
+                                    <constraint firstAttribute="width" secondItem="Wd0-ZO-DQN" secondAttribute="height" constant="-32" id="I4e-8v-xZL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isProfileRounded" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="profileBGColor">
                                         <color key="value" red="0.83879009049999997" green="0.016421669409999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="avaName" value="Overly Attached Girlfriend"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="avaName" value="Crazy Girl"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="avaImage" value="oag"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isNameHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="avaNameString" value="aafaff"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="avaNameColor">
+                                        <color key="value" red="0.95686274510000002" green="0.57254901960000004" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="avaNameSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="topLeftIcon" value="oag"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="topRightIcon" value="oag"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="bottomLeftIcon" value="oag"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="bottomRightIcon" value="oag"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -48,7 +59,7 @@
                         <constraints>
                             <constraint firstItem="Wd0-ZO-DQN" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="1:3" id="KjN-0e-wCb"/>
                             <constraint firstItem="PQc-l6-OE1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="MIR-Hm-zPq"/>
-                            <constraint firstItem="Wd0-ZO-DQN" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="STa-bQ-aDZ"/>
+                            <constraint firstItem="Wd0-ZO-DQN" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-16" id="STa-bQ-aDZ"/>
                             <constraint firstItem="Wd0-ZO-DQN" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="UXD-aJ-EMi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PQc-l6-OE1" secondAttribute="trailing" constant="16" id="dyk-7Q-YQz"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PQc-l6-OE1" secondAttribute="bottom" constant="16" id="uey-pA-3tD"/>

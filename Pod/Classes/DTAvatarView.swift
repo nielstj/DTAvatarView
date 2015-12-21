@@ -27,16 +27,13 @@ class DTAvatarView: UIView {
     @IBInspectable var isProfileRounded : Bool = true
     
     
+    
+    
     @IBInspectable var isNameHidden : Bool = false {
         didSet {
-            let center = isNameHidden ? 0 : nameLbl.frame.size.height
-            nameLbl.hidden = isNameHidden
-            imgCenterConstraint.constant = center
-            self.layoutIfNeeded()
+            self.updateAvaNameLbl()
         }
     }
-    
-    
     @IBInspectable var avaName : String? {
         didSet {
             let name = avaName != nil ? avaName : "Anonymous"
@@ -44,18 +41,53 @@ class DTAvatarView: UIView {
             initialLbl.text = getInitialFromName(name!)
         }
     }
+    @IBInspectable var avaNameSize : CGFloat = 20 {
+        didSet {
+            updateAvaNameLbl()
+        }
+    }
+    @IBInspectable var avaNameFont : String? {
+        didSet {
+            updateAvaNameLbl()
+        }
+    }
+    @IBInspectable var avaNameColor : UIColor = UIColor.whiteColor() {
+        didSet {
+            nameLbl.textColor = avaNameColor
+        }
+    }
+    
+    
+    
+    @IBInspectable weak var topLeftIcon : UIImage? {
+        didSet { topLeftIconImgView.image = topLeftIcon }
+    }
+    @IBInspectable weak var topRightIcon : UIImage? {
+        didSet { topRightIconImgView.image = topRightIcon }
+    }
+    @IBInspectable weak var bottomLeftIcon : UIImage? {
+        didSet { bottomLeftIconImgView.image = bottomLeftIcon }
+    }
+    @IBInspectable weak var bottomRightIcon : UIImage? {
+        didSet { bottomRightIconImgView.image = bottomRightIcon }
+    }
+    
+    
+    
+    
     
     
     @IBOutlet weak var profileContainer : UIView!
     
     @IBOutlet weak var initialLbl : UILabel!
     @IBOutlet weak var profileImgView : UIImageView!
-    @IBOutlet weak var topLeftIcon : UIImageView!
-    @IBOutlet weak var topRIghtIcon : UIImageView!
-    @IBOutlet weak var bottomLeftIcon : UIImageView!
-    @IBOutlet weak var bottomRightIcon : UIImageView!
+    @IBOutlet weak var topLeftIconImgView : UIImageView!
+    @IBOutlet weak var topRightIconImgView : UIImageView!
+    @IBOutlet weak var bottomLeftIconImgView : UIImageView!
+    @IBOutlet weak var bottomRightIconImgView : UIImageView!
     
-    @IBOutlet weak var imgCenterConstraint : NSLayoutConstraint!
+    @IBOutlet weak var nameLblHeightConstraint : NSLayoutConstraint!
+    
     
     @IBOutlet weak var nameLbl : UILabel!
     
@@ -93,10 +125,23 @@ class DTAvatarView: UIView {
     
     override func drawRect(rect: CGRect) {
         
-        let corner = max(profileContainer.frame.size.height, profileContainer.frame.size.width)
+        let corner = min(profileContainer.frame.size.height, profileContainer.frame.size.width)
         let cornerRadius = isProfileRounded ? corner/2 : 0
         profileContainer.layer.cornerRadius = cornerRadius
         profileContainer.layer.masksToBounds = true
+    }
+    
+    
+    private func updateAvaNameLbl() {
+        if avaNameFont != nil {
+            nameLbl.font = UIFont(name: avaNameFont!, size: CGFloat(avaNameSize))
+        }
+        else {
+            nameLbl.font = UIFont.systemFontOfSize(CGFloat(avaNameSize))
+        }
+        let height = isNameHidden ? 0 : avaNameSize
+        nameLblHeightConstraint.constant = height
+        self.layoutIfNeeded()
     }
     
     private func getInitialFromName(name : String) -> String {
