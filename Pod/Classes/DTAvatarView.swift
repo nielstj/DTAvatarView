@@ -20,9 +20,13 @@ class DTAvatarView: UIView {
         }
     }
     @IBInspectable weak var profileBGColor : UIColor? {
-        didSet {
-            profileContainer.backgroundColor = profileBGColor
-        }
+        didSet { profileContainer.backgroundColor = profileBGColor }
+    }
+    @IBInspectable var initialLblFont : String? {
+        didSet { self.updateInitialLbl() }
+    }
+    @IBInspectable weak var initialColor : UIColor? {
+        didSet { initialLbl.textColor = initialColor }
     }
     @IBInspectable var isProfileRounded : Bool = true
     
@@ -30,9 +34,7 @@ class DTAvatarView: UIView {
     
     
     @IBInspectable var isNameHidden : Bool = false {
-        didSet {
-            self.updateAvaNameLbl()
-        }
+        didSet { self.updateAvaNameLbl() }
     }
     @IBInspectable var avaName : String? {
         didSet {
@@ -42,19 +44,13 @@ class DTAvatarView: UIView {
         }
     }
     @IBInspectable var avaNameSize : CGFloat = 20 {
-        didSet {
-            updateAvaNameLbl()
-        }
+        didSet { updateAvaNameLbl() }
     }
     @IBInspectable var avaNameFont : String? {
-        didSet {
-            updateAvaNameLbl()
-        }
+        didSet { updateAvaNameLbl() }
     }
     @IBInspectable var avaNameColor : UIColor = UIColor.whiteColor() {
-        didSet {
-            nameLbl.textColor = avaNameColor
-        }
+        didSet { nameLbl.textColor = avaNameColor }
     }
     
     
@@ -129,6 +125,8 @@ class DTAvatarView: UIView {
         let cornerRadius = isProfileRounded ? corner/2 : 0
         profileContainer.layer.cornerRadius = cornerRadius
         profileContainer.layer.masksToBounds = true
+        updateInitialLbl()
+        
     }
     
     
@@ -137,11 +135,21 @@ class DTAvatarView: UIView {
             nameLbl.font = UIFont(name: avaNameFont!, size: CGFloat(avaNameSize))
         }
         else {
-            nameLbl.font = UIFont.systemFontOfSize(CGFloat(avaNameSize))
+            nameLbl.font = UIFont.boldSystemFontOfSize(CGFloat(avaNameSize))
         }
         let height = isNameHidden ? 0 : avaNameSize
         nameLblHeightConstraint.constant = height
         self.layoutIfNeeded()
+    }
+    
+    private func updateInitialLbl() {
+        let corner = min(profileContainer.frame.size.height, profileContainer.frame.size.width) * 0.5
+        if initialLblFont != nil {
+            initialLbl.font = UIFont(name: initialLblFont!, size: CGFloat(corner))
+        }
+        else {
+            initialLbl.font = UIFont.boldSystemFontOfSize(CGFloat(corner))
+        }
     }
     
     private func getInitialFromName(name : String) -> String {

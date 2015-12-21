@@ -39,7 +39,6 @@
                                         <color key="value" red="0.83879009049999997" green="0.016421669409999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="avaName" value="Crazy Girl"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="avaImage" value="oag"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isNameHidden" value="NO"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="avaNameString" value="aafaff"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="avaNameColor">
@@ -48,10 +47,12 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="avaNameSize">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="topLeftIcon" value="oag"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="topRightIcon" value="oag"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="bottomLeftIcon" value="oag"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="bottomRightIcon" value="oag"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="initialColor">
+                                        <color key="value" red="0.95686274510000002" green="0.57254901960000004" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialLblSize">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -74,7 +75,4 @@
             <point key="canvasLocation" x="340" y="389"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="oag" width="130" height="130"/>
-    </resources>
 </document>
