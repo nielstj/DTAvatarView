@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DTAvatarView"
-  s.version          = "0.1.5"
+  s.version          = "0.1.6"
   s.summary          = "Avatar that shows image or initial name"
 
 # This description is used to generate tags and improve search results.
