@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import DTAvatarView
 
 class ViewController: UIViewController {
 
+    var ava : DTAvatarView?
+    
     
     @IBOutlet weak var sizeConstraint : NSLayoutConstraint!
     

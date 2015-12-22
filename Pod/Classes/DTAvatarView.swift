@@ -10,22 +10,22 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class DTAvatarView: UIView {
+public class DTAvatarView: UIView {
     
     
-    @IBInspectable weak var avaImage : UIImage? {
+    @IBInspectable public weak var avaImage : UIImage? {
         didSet {
             profileImgView.image = avaImage
             initialLbl.hidden = (avaImage != nil)
         }
     }
-    @IBInspectable weak var profileBGColor : UIColor? {
+    @IBInspectable public weak var profileBGColor : UIColor? {
         didSet { profileContainer.backgroundColor = profileBGColor }
     }
-    @IBInspectable var initialLblFont : String? {
+    @IBInspectable public var initialLblFont : String? {
         didSet { self.updateInitialLbl() }
     }
-    @IBInspectable weak var initialColor : UIColor? {
+    @IBInspectable public weak var initialColor : UIColor? {
         didSet { initialLbl.textColor = initialColor }
     }
     @IBInspectable var isProfileRounded : Bool = true
@@ -33,37 +33,37 @@ class DTAvatarView: UIView {
     
     
     
-    @IBInspectable var isNameHidden : Bool = false {
+    @IBInspectable public var isNameHidden : Bool = false {
         didSet { self.updateAvaNameLbl() }
     }
-    @IBInspectable var avaName : String = "Anonymous"  {
+    @IBInspectable public var avaName : String = "Anonymous"  {
         didSet {
             nameLbl.text = avaName
             initialLbl.text = getInitialFromName(avaName)
         }
     }
-    @IBInspectable var avaNameSize : CGFloat = 20 {
+    @IBInspectable public var avaNameSize : CGFloat = 20 {
         didSet { updateAvaNameLbl() }
     }
-    @IBInspectable var avaNameFont : String? {
+    @IBInspectable public var avaNameFont : String? {
         didSet { updateAvaNameLbl() }
     }
-    @IBInspectable var avaNameColor : UIColor = UIColor.whiteColor() {
+    @IBInspectable public var avaNameColor : UIColor = UIColor.whiteColor() {
         didSet { nameLbl.textColor = avaNameColor }
     }
     
     
     
-    @IBInspectable weak var topLeftIcon : UIImage? {
+    @IBInspectable public weak var topLeftIcon : UIImage? {
         didSet { topLeftIconImgView.image = topLeftIcon }
     }
-    @IBInspectable weak var topRightIcon : UIImage? {
+    @IBInspectable public weak var topRightIcon : UIImage? {
         didSet { topRightIconImgView.image = topRightIcon }
     }
-    @IBInspectable weak var bottomLeftIcon : UIImage? {
+    @IBInspectable public weak var bottomLeftIcon : UIImage? {
         didSet { bottomLeftIconImgView.image = bottomLeftIcon }
     }
-    @IBInspectable weak var bottomRightIcon : UIImage? {
+    @IBInspectable public weak var bottomRightIcon : UIImage? {
         didSet { bottomRightIconImgView.image = bottomRightIcon }
     }
     
@@ -73,17 +73,13 @@ class DTAvatarView: UIView {
     
     
     @IBOutlet weak var profileContainer : UIView!
-    
     @IBOutlet weak var initialLbl : UILabel!
     @IBOutlet weak var profileImgView : UIImageView!
     @IBOutlet weak var topLeftIconImgView : UIImageView!
     @IBOutlet weak var topRightIconImgView : UIImageView!
     @IBOutlet weak var bottomLeftIconImgView : UIImageView!
     @IBOutlet weak var bottomRightIconImgView : UIImageView!
-    
     @IBOutlet weak var nameLblHeightConstraint : NSLayoutConstraint!
-    
-    
     @IBOutlet weak var nameLbl : UILabel!
     
     
@@ -108,18 +104,18 @@ class DTAvatarView: UIView {
         return view
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
     }
 
     
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
         
         let corner = min(profileContainer.frame.size.height, profileContainer.frame.size.width)
         let cornerRadius = isProfileRounded ? corner/2 : 0
