@@ -11,7 +11,7 @@ import DTAvatarView
 
 class ViewController: UIViewController {
 
-    var ava : DTAvatarView?
+    //var ava : DTAvatarView?
     
     
     @IBOutlet weak var sizeConstraint : NSLayoutConstraint!
