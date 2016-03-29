@@ -15,6 +15,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		650E4CE31CAA619A0071D731 /* DTAvatarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 650E4CE21CAA619A0071D731 /* DTAvatarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		650E4CE91CAA61D20071D731 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 650E4CE81CAA61D20071D731 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		607FACE51AFB9204008FA782 /* DTAvatarView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTAvatarView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		650E4CE01CAA619A0071D731 /* DTAvatarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTAvatarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		650E4CE21CAA619A0071D731 /* DTAvatarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAvatarView.h; sourceTree = "<group>"; };
+		650E4CE41CAA619A0071D731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650E4CE81CAA61D20071D731 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF277B55D31DD372F222B37F /* Pods-DTAvatarView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTAvatarView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DTAvatarView_Tests/Pods-DTAvatarView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C7FF6D65E9C138044B395514 /* Pods-DTAvatarView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTAvatarView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DTAvatarView_Example/Pods-DTAvatarView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E11A066D295F2F431C7BAC18 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -66,6 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		650E4CDC1CAA619A0071D731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,9 +96,11 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				650E4CE81CAA61D20071D731 /* Default-568h@2x.png */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for DTAvatarView */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				650E4CE11CAA619A0071D731 /* DTAvatarView */,
 				607FACD11AFB9204008FA782 /* Products */,
 				1DA08D8A92B8CC58FBD9C0D3 /* Pods */,
 				BA7BE45AC08DBF8A3F44FC5A /* Frameworks */,
@@ -97,6 +112,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* DTAvatarView_Example.app */,
 				607FACE51AFB9204008FA782 /* DTAvatarView_Tests.xctest */,
+				650E4CE01CAA619A0071D731 /* DTAvatarView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +166,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		650E4CE11CAA619A0071D731 /* DTAvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				650E4CE21CAA619A0071D731 /* DTAvatarView.h */,
+				650E4CE41CAA619A0071D731 /* Info.plist */,
+			);
+			path = DTAvatarView;
+			sourceTree = "<group>";
+		};
 		BA7BE45AC08DBF8A3F44FC5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +185,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		650E4CDD1CAA619A0071D731 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650E4CE31CAA619A0071D731 /* DTAvatarView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		607FACCF1AFB9204008FA782 /* DTAvatarView_Example */ = {
@@ -203,6 +239,24 @@
 			productReference = 607FACE51AFB9204008FA782 /* DTAvatarView_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		650E4CDF1CAA619A0071D731 /* DTAvatarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650E4CE51CAA619A0071D731 /* Build configuration list for PBXNativeTarget "DTAvatarView" */;
+			buildPhases = (
+				650E4CDB1CAA619A0071D731 /* Sources */,
+				650E4CDC1CAA619A0071D731 /* Frameworks */,
+				650E4CDD1CAA619A0071D731 /* Headers */,
+				650E4CDE1CAA619A0071D731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTAvatarView;
+			productName = DTAvatarView;
+			productReference = 650E4CE01CAA619A0071D731 /* DTAvatarView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,6 +273,9 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					650E4CDF1CAA619A0071D731 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -237,6 +294,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* DTAvatarView_Example */,
 				607FACE41AFB9204008FA782 /* DTAvatarView_Tests */,
+				650E4CDF1CAA619A0071D731 /* DTAvatarView */,
 			);
 		};
 /* End PBXProject section */
@@ -247,12 +305,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				650E4CE91CAA61D20071D731 /* Default-568h@2x.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650E4CDE1CAA619A0071D731 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,6 +438,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		650E4CDB1CAA619A0071D731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -439,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -477,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -490,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DTAvatarView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -503,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DTAvatarView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -548,6 +623,49 @@
 			};
 			name = Release;
 		};
+		650E4CE61CAA619A0071D731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DTAvatarView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appvania.pullrefresh.DTAvatarView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		650E4CE71CAA619A0071D731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DTAvatarView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appvania.pullrefresh.DTAvatarView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,6 +692,15 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		650E4CE51CAA619A0071D731 /* Build configuration list for PBXNativeTarget "DTAvatarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650E4CE61CAA619A0071D731 /* Debug */,
+				650E4CE71CAA619A0071D731 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
