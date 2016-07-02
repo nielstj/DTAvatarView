@@ -16,7 +16,7 @@ public class DTAvatarView: UIView {
     @IBInspectable public weak var avaImage : UIImage? {
         didSet {
             profileImgView.image = avaImage
-            initialLbl.hidden = (avaImage != nil)
+            initialLbl.isHidden = (avaImage != nil)
         }
     }
     @IBInspectable public weak var profileBGColor : UIColor? {
@@ -48,7 +48,7 @@ public class DTAvatarView: UIView {
     @IBInspectable public var avaNameFont : String? {
         didSet { updateAvaNameLbl() }
     }
-    @IBInspectable public var avaNameColor : UIColor = UIColor.whiteColor() {
+    @IBInspectable public var avaNameColor : UIColor = UIColor.white() {
         didSet { nameLbl.textColor = avaNameColor }
     }
     
@@ -91,16 +91,16 @@ public class DTAvatarView: UIView {
     func xibSetup() {
         view = loadViewFromNib()
         view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         addSubview(view)
         avaName = "Anonymous"
     }
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: self.dynamicType)
         let nib = UINib(nibName: "DTAvatarView", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options : nil)[0] as! UIView
+        let view = nib.instantiate(withOwner: self, options : nil)[0] as! UIView
         return view
     }
     
@@ -115,7 +115,7 @@ public class DTAvatarView: UIView {
     }
 
     
-    override public func drawRect(rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         
         let corner = min(profileContainer.frame.size.height, profileContainer.frame.size.width)
         let cornerRadius = isProfileRounded ? corner/2 : 0
@@ -131,7 +131,7 @@ public class DTAvatarView: UIView {
             nameLbl.font = UIFont(name: avaNameFont!, size: CGFloat(avaNameSize))
         }
         else {
-            nameLbl.font = UIFont.boldSystemFontOfSize(CGFloat(avaNameSize))
+            nameLbl.font = UIFont.boldSystemFont(ofSize: CGFloat(avaNameSize))
         }
         let height = isNameHidden ? 0 : avaNameSize
         nameLblHeightConstraint.constant = height
@@ -144,12 +144,12 @@ public class DTAvatarView: UIView {
             initialLbl.font = UIFont(name: initialLblFont!, size: CGFloat(corner))
         }
         else {
-            initialLbl.font = UIFont.boldSystemFontOfSize(CGFloat(corner))
+            initialLbl.font = UIFont.boldSystemFont(ofSize: CGFloat(corner))
         }
     }
     
-    private func getInitialFromName(name : String) -> String {
-        var nameArr = name.componentsSeparatedByString(" ")
+    private func getInitialFromName(_ name : String) -> String {
+        var nameArr = name.components(separatedBy: " ")
         nameArr = nameArr.filter({ (word) -> Bool in
             return word.characters.count > 0
         })
