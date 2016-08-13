@@ -48,7 +48,7 @@ public class DTAvatarView: UIView {
     @IBInspectable public var avaNameFont : String? {
         didSet { updateAvaNameLbl() }
     }
-    @IBInspectable public var avaNameColor : UIColor = UIColor.white() {
+    @IBInspectable public var avaNameColor : UIColor = UIColor.white {
         didSet { nameLbl.textColor = avaNameColor }
     }
     
