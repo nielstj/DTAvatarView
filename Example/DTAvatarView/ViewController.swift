@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func changeSize(sender : AnyObject) {
+    @IBAction func changeSize(_ sender : AnyObject) {
         var size = sizeConstraint.constant
         size = size == 0 ? -60 : 0
         sizeConstraint.constant = size

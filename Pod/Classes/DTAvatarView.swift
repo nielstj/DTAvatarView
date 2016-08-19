@@ -10,22 +10,22 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class DTAvatarView: UIView {
+open class DTAvatarView: UIView {
     
     
-    @IBInspectable public weak var avaImage : UIImage? {
+    @IBInspectable open weak var avaImage : UIImage? {
         didSet {
             profileImgView.image = avaImage
             initialLbl.isHidden = (avaImage != nil)
         }
     }
-    @IBInspectable public weak var profileBGColor : UIColor? {
+    @IBInspectable open weak var profileBGColor : UIColor? {
         didSet { profileContainer.backgroundColor = profileBGColor }
     }
-    @IBInspectable public var initialLblFont : String? {
+    @IBInspectable open var initialLblFont : String? {
         didSet { self.updateInitialLbl() }
     }
-    @IBInspectable public weak var initialColor : UIColor? {
+    @IBInspectable open weak var initialColor : UIColor? {
         didSet { initialLbl.textColor = initialColor }
     }
     @IBInspectable var isProfileRounded : Bool = true
@@ -33,37 +33,37 @@ public class DTAvatarView: UIView {
     
     
     
-    @IBInspectable public var isNameHidden : Bool = false {
+    @IBInspectable open var isNameHidden : Bool = false {
         didSet { self.updateAvaNameLbl() }
     }
-    @IBInspectable public var avaName : String = "Anonymous"  {
+    @IBInspectable open var avaName : String = "Anonymous"  {
         didSet {
             nameLbl.text = avaName
             initialLbl.text = getInitialFromName(avaName)
         }
     }
-    @IBInspectable public var avaNameSize : CGFloat = 20 {
+    @IBInspectable open var avaNameSize : CGFloat = 20 {
         didSet { updateAvaNameLbl() }
     }
-    @IBInspectable public var avaNameFont : String? {
+    @IBInspectable open var avaNameFont : String? {
         didSet { updateAvaNameLbl() }
     }
-    @IBInspectable public var avaNameColor : UIColor = UIColor.white {
+    @IBInspectable open var avaNameColor : UIColor = UIColor.white {
         didSet { nameLbl.textColor = avaNameColor }
     }
     
     
     
-    @IBInspectable public weak var topLeftIcon : UIImage? {
+    @IBInspectable open weak var topLeftIcon : UIImage? {
         didSet { topLeftIconImgView.image = topLeftIcon }
     }
-    @IBInspectable public weak var topRightIcon : UIImage? {
+    @IBInspectable open weak var topRightIcon : UIImage? {
         didSet { topRightIconImgView.image = topRightIcon }
     }
-    @IBInspectable public weak var bottomLeftIcon : UIImage? {
+    @IBInspectable open weak var bottomLeftIcon : UIImage? {
         didSet { bottomLeftIconImgView.image = bottomLeftIcon }
     }
-    @IBInspectable public weak var bottomRightIcon : UIImage? {
+    @IBInspectable open weak var bottomRightIcon : UIImage? {
         didSet { bottomRightIconImgView.image = bottomRightIcon }
     }
     
@@ -98,7 +98,7 @@ public class DTAvatarView: UIView {
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = Bundle(for: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "DTAvatarView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options : nil)[0] as! UIView
         return view
@@ -115,7 +115,7 @@ public class DTAvatarView: UIView {
     }
 
     
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         
         let corner = min(profileContainer.frame.size.height, profileContainer.frame.size.width)
         let cornerRadius = isProfileRounded ? corner/2 : 0
@@ -126,7 +126,7 @@ public class DTAvatarView: UIView {
     }
     
     
-    private func updateAvaNameLbl() {
+    fileprivate func updateAvaNameLbl() {
         if avaNameFont != nil {
             nameLbl.font = UIFont(name: avaNameFont!, size: CGFloat(avaNameSize))
         }
@@ -138,7 +138,7 @@ public class DTAvatarView: UIView {
         self.layoutIfNeeded()
     }
     
-    private func updateInitialLbl() {
+    fileprivate func updateInitialLbl() {
         let corner = min(profileContainer.frame.size.height, profileContainer.frame.size.width) * 0.5
         if initialLblFont != nil {
             initialLbl.font = UIFont(name: initialLblFont!, size: CGFloat(corner))
@@ -148,7 +148,7 @@ public class DTAvatarView: UIView {
         }
     }
     
-    private func getInitialFromName(_ name : String) -> String {
+    fileprivate func getInitialFromName(_ name : String) -> String {
         var nameArr = name.components(separatedBy: " ")
         nameArr = nameArr.filter({ (word) -> Bool in
             return word.characters.count > 0
